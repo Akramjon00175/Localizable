@@ -66,7 +66,6 @@ struct Task6_1_2: View {
                 
             }.frame(maxWidth: .infinity,maxHeight: 70)
                 
-            
         }
 
     }
