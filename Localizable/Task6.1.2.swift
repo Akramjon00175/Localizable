@@ -1,13 +1,19 @@
+//
+//  Task6.1.2.swift
+//  Localizable
+//
+//  Created by Akramjon on 23/09/23.
+//
 
 import SwiftUI
 
-struct ContentView: View {
+struct Task6_1_2: View {
     
     @State var welcome = "str_welcome".localized()
+   
     
     
     var body: some View {
-        
         VStack {
             VStack {
                 Text(welcome)
@@ -19,7 +25,7 @@ struct ContentView: View {
                     Button(action: {
                         
                         Bundle.setLanguage(lang: "en")
-                        welcome = "str_welcome".localized()
+                        welcome = "welcome".localized()
                         
                     }){
                        Text("English")
@@ -33,10 +39,10 @@ struct ContentView: View {
                 VStack{
                     
                     Button(action: {
-                        Bundle.setLanguage(lang: "ru")
+                        Bundle.setLanguage(lang: "ko")
                         welcome = "str_welcome".localized()
                     }){
-                       Text("Russian")
+                       Text("Korean")
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity,maxHeight: .infinity)
                             .background(Color.blue)
@@ -47,27 +53,13 @@ struct ContentView: View {
                 VStack{
                     
                     Button(action: {
-                        Bundle.setLanguage(lang: "uz")
+                        Bundle.setLanguage(lang: "zh")
                         welcome = "str_welcome".localized()
                     }){
-                       Text("Uzbek")
+                       Text("Chinese")
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity,maxHeight: .infinity)
                             .background(Color.green)
-                    }
-                    
-                }.frame(maxWidth: .infinity,maxHeight: .infinity)
-                
-                VStack{
-                    
-                    Button(action: {
-                        Bundle.setLanguage(lang: "fr")
-                        welcome = "str_welcome".localized()
-                    }){
-                       Text("French")
-                            .foregroundColor(.white)
-                            .frame(maxWidth: .infinity,maxHeight: .infinity)
-                            .background(Color.orange)
                     }
                     
                 }.frame(maxWidth: .infinity,maxHeight: .infinity)
@@ -76,15 +68,12 @@ struct ContentView: View {
                 
             
         }
-        
+
     }
-    
 }
 
-
-struct ContentView_Previews: PreviewProvider {
+struct Task6_1_2_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-            .environment(\.locale, .init(identifier:  "ru"))
+        Task6_1_2()
     }
 }
