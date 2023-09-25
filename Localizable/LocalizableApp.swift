@@ -11,7 +11,8 @@ import SwiftUI
 struct LocalizableApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomePage()
+                .environmentObject(UserSettings())
         }
     }
 }
